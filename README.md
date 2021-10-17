@@ -1,24 +1,39 @@
-# README
+# Advertisement App
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Ruby on rails web application for the Advertisement, where the user can come and publish his/her advertisement.
 
-Things you may want to cover:
+Website is live at https://advertisement-rails.herokuapp.com/
 
-* Ruby version
+## Installation
+Make sure Ruby is installed on computer.
 
-* System dependencies
+```
+ruby -v
+```
+Make sure Rails is installed
+```
+rails -v
+```
 
-* Configuration
+Clone git repository
+```
+git clone https://github.com/Saran-MS/Advertisement-rails
+```
 
-* Database creation
+Install all dependencies
+```
+bundle install
+```
 
-* Database initialization
+Create db and migrate schema
+```
+rake db:create
+rake db:migrate
+```
+Now run the application
+```
+rails s
+```
+For production environment:
+https://devcenter.heroku.com/articles/getting-started-with-rails6
 
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
