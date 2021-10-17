@@ -1,0 +1,25 @@
+ <% if user_signed_in? %>
+<% @ads.each do |ad| %>
+<div class="jumbotron">
+
+  <h1 class="display-4"><%= ad.description %></h1>
+  <h4>Name : <%= ad.name %></h4>
+  <hr class="my-4">
+  <p>Email : <%= ad.email %> | Phone : <%= ad.phone %></p>
+ 
+  <div class="form-inline">
+  <div class="form-group mx-sm-3">
+    <input type="text" class="form-control"  placeholder="Add Comment">
+  </div>
+  <button class="btn btn-primary" href="#" role="button">send</button>
+</div>
+</div>
+<% end %>
+<%= link_to 'New Ad', new_ad_path,class:"btn btn-info" %>
+<% else %>
+
+<h1>Welcome to the Advertisement App. Sign Up to Continue..
+
+<% end %>
+
+

@@ -1,0 +1,44 @@
+<%= form_with(model: ad) do |form| %>
+  <% if ad.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(ad.errors.count, "error") %> prohibited this ad from being saved:</h2>
+
+      <ul>
+        <% ad.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field form-group">
+    <%= form.label :name %>
+    <%= form.text_field :name,class:"form-control" %>
+  </div>
+
+  <div class="field form-group">
+    <%= form.label :email %>
+    <%= form.text_field :email,class:"form-control" %>
+  </div>
+
+  <div class="field form-group">
+    <%= form.label :phone %>
+    <%= form.text_field :phone,class:"form-control" %>
+  </div>
+
+  <div class="field form-group">
+    <%= form.label :description %>
+    <%= form.text_area :description,class:"form-control",rows:"3" %>
+  </div>
+
+ <div class="field form-group">
+
+    <%= form.number_field :user_id,id: :ad_user_id,class:"form-control",type: :hidden,value:current_user.id %>
+  </div>
+
+
+  
+  <div class="actions form-group">
+    <%= form.submit class:'btn btn-secondary' %>
+  </div>
+<% end %>

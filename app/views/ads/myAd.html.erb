@@ -1,0 +1,16 @@
+
+<% @ads.each do |ad| %>
+<% if ad.user_id == current_user.id %>
+<div class="jumbotron">
+
+  <h1 class="display-4"><%= ad.description %></h1>
+  <h4>Name : <%= ad.name %></h4>
+  <hr class="my-4">
+  <p>Email : <%= ad.email %> | Phone : <%= ad.phone %></p>
+  <div class="form-inline">
+    <%= link_to 'Edit', edit_ad_path(ad),class:"btn btn-primary mx-sm-3" %>
+    <%= link_to 'Delete', ad,class:"btn btn-danger", method: :delete, data: { confirm: 'Are you sure?' } %>
+    </div>
+</div>
+ <% end  %>
+<% end %>

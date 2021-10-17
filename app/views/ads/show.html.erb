@@ -1,0 +1,13 @@
+<div class="jumbotron">
+
+  <h1 class="display-4"><%= @ad.description %></h1>
+  <h4>Name : <%= @ad.name %></h4>
+  <hr class="my-4">
+  <p>Email : <%= @ad.email %> | Phone : <%= @ad.phone %></p>
+ 
+  <%= link_to 'Edit', edit_ad_path(@ad),class:'btn btn-info' %>      
+  <%= link_to 'Back', ads_path,class:'btn btn-info' %>
+ 
+</div>
+
+
